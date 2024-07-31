@@ -19,4 +19,5 @@ void main(){
     printf("\nchar in float: %f", d);
     printf("\ninteger in char: %c", e);
     printf("\nfloat in char: %c", f);
+    scanf("%d");
 }

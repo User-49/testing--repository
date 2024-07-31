@@ -16,4 +16,5 @@ void main(){
 
     printf("\n\n%c", 65.0);
     printf("\n%c", 65);
+    scanf("%d");
 }
