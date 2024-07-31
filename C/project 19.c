@@ -1,6 +1,7 @@
 #include <stdio.h>
 void main(){
-    float x;
-    x = scanf("%d");
-printf("%f",x);
-scanf("%d");}
+    int i;
+    for (i=0;i++ <10;)
+    printf("%d",i);
+scanf("%d");
+}
