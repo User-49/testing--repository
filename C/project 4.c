@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main(){
     float z;
-    char a='A', b='B', c='C';
+    char a=65.0, b='B', c='C';
     
     printf("%d", a);
     printf("\n%f", a);
