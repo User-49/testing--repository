@@ -10,5 +10,5 @@ void main() {
     
     a = a/3.14; b=b/3.14;
     
-    printf("square of sine nd cosine of this angle %f", pow(sin(a),2)+ pow(cos(b),2));
+    printf("square of sine nd cosine of this angle %f", pow(sin(a),2) + pow(cos(b),2));
 }
