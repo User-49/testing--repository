@@ -28,9 +28,6 @@ void main(){
                 for (num2 = 1;num1;num1--)
                     num2 *= num1;
                 printf("factorial of number is: %d\n",num2);
-                printf("press enter to back");
-                fflush(stdin);
-                scanf("%c", &temp);
                 break;
             case 2: 
                 flag = 0;
@@ -39,19 +36,11 @@ void main(){
                             flag =1;
                 (flag?printf("given number is not a prime\n"):printf("the given number is a prime\n"));
                 printf("press enter to back");
-                fflush(stdin);
-                scanf("%c", &temp);                
-                break;
             case 3:
                 (num1%2?printf("the given number is odd\n"):printf("the given number is even\n"));
-                printf("press enter to back");
-                fflush(stdin);
-                scanf("%c", &temp);
                 break;
             default:
                 printf("invalid choice, press enter to go back");
-                fflush(stdin);
-                scanf("%c", &temp);
         }
     }
 }
