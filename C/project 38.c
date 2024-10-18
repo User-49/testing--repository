@@ -1,13 +1,13 @@
 #include <stdio.h>
 void main(){
-int i=58,*J,**k;
+int i=58,*j,**k;
 
-printf("%u\n",j);
-printf("%u\n",k);
-printf("%u\n",i)
 j=&i;
 k=&j;
-
+printf("%u\n",&i);
 printf("%u\n",j);
-printf("%u\n",k);
+printf("%u\n\n",k);
+
+printf("%d\n",*j);
+printf("%u\n", **k);
 }

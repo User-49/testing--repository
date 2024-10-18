@@ -12,7 +12,6 @@ static int count=0;
 count++;
 }
 void main(){
-static int count;
 printf("%d",count);
 func1();
 printf("%d",count);
