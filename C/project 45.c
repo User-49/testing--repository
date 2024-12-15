@@ -12,7 +12,7 @@ void substract(int *,int *,int *,int);
 
 void main(){
 
-	int m1,n1,choice=0,*arr_3_ptr=NULL;
+	int m1,n1,m3,n3,choice=0;
 
 	start:
 	printf("------------------------------------------------------------------------\n");
@@ -44,16 +44,28 @@ void main(){
 
 		printf("\nenter choice: ");
 		scanf("%d",&choice);
+		int *arr_3_ptr=NULL;
 
 		switch (choice){
 			case 1:
-				int arr_2[m1*n1],*arr_3=malloc(m1*n1*sizeof(int));
+				int *arr_2=malloc(m1*n1*sizeof(int)),*arr_3=malloc(m1*n1*sizeof(int));
 				arr_3_ptr=arr_3;
+				m3=m1;
+				n3=n1;
 				printf("\nenter the matrix:\n\n");
 				input(arr_2,m1,n1);
 				add(arr_1,arr_2,arr_3,m1*n1);
+				free(arr_2);
 				break;
 			case 2:
+				int *arr_2=malloc(m1*n1*sizeof(int)),*arr_3=malloc(m1*n1*sizeof(int));
+				arr_3_ptr=arr_3;
+				m3=m1;
+				n3=n1;
+				printf("\nenter the matrix:\n\n");
+				input(arr_2,m1,n1);
+				substract(arr_1,arr_2,arr_3,m1*n1);
+				free(arr_2);
 				break;
 			case 3:
 				break;
@@ -66,18 +78,24 @@ void main(){
 			case 7:
 				break;
 			case 0:
-				printf("you have exited the program\n");
-				break;
+				printf("\nyou have exited the program\n");
+				printf("************************************************************************\n");
+
+				exit;
 			default:
 				printf("invalid input\n");
 
 		}
-
+	free(arr_1);
+	int *arr_1=malloc(m3*n3*sizeof(int));
+	for (int i=0,n=m3*n3;i<n;i++)
+		*(arr_1+i)=*(arr_3_ptr+i);
+	m1=m3;
+	n1=n3;
+	free(arr_3_ptr);
 
 
 	}while (choice);
-
-	printf("************************************************************************\n");
 }
 
 
